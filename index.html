@@ -12,8 +12,19 @@
                 -webkit-animation-duration: 40s;
                 -webkit-animation-name: fade;
                 -webkit-animation-fill-mode: forwards;
+                -moz-animation-duration: 40s;
+                -moz-animation-name: fade;
+                -moz-animation-fill-mode: forwards;
             }
             @-webkit-keyframes fade {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0;
+                }
+            }
+            @-moz-keyframes fade {
                 from {
                     opacity: 1;
                 }
@@ -28,8 +39,19 @@
                 -webkit-animation-duration: 1s;
                 -webkit-animation-name: fade-fast;
                 -webkit-animation-fill-mode: forwards;
+                -moz-animation-duration: 1s;
+                -moz-animation-name: fade-fast;
+                -moz-animation-fill-mode: forwards;
             }
             @-webkit-keyframes fade-fast {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0;
+                }
+            }
+            @-moz-keyframes fade-fast {
                 from {
                     opacity: 1;
                 }
