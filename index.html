@@ -32,32 +32,38 @@
                     opacity: 0;
                 }
             }
+            @-webkit-keyframes cycle {
+                from {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                to {
+                  opacity: 0;
+                }
+            }
+            @-moz-keyframes cycle {
+                from {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 0;
+                }
+            }
             .fade-fast {
-                animation-duration: 1.5s;
-                animation-name: fade-fast;
+                animation-duration: 1s;
+                animation-name: fade;
                 animation-fill-mode: forwards;
                 -webkit-animation-duration: 1s;
-                -webkit-animation-name: fade-fast;
+                -webkit-animation-name: fade;
                 -webkit-animation-fill-mode: forwards;
                 -moz-animation-duration: 1s;
-                -moz-animation-name: fade-fast;
+                -moz-animation-name: fade;
                 -moz-animation-fill-mode: forwards;
-            }
-            @-webkit-keyframes fade-fast {
-                from {
-                    opacity: 1;
-                }
-                to {
-                    opacity: 0;
-                }
-            }
-            @-moz-keyframes fade-fast {
-                from {
-                    opacity: 1;
-                }
-                to {
-                    opacity: 0;
-                }
             }
             .splash {
               position: absolute;
@@ -69,14 +75,25 @@
             .splash p {
               margin: 10px;
             }
-            p.line-2 {
+            .splash p:nth-child(2) {
               margin-left: 140px;
+            }
+            .cursor:before {
+              content: "|";
+            }
+            .cursor {
+              position: absolute;
+              -webkit-animation-name: 'cycle';
+              -webkit-animation-duration: 1s;
+              -webkit-animation-timing-function: steps(1, end);
+              -webkit-animation-iteration-count: infinite;
             }
         </style>
         <script src="ephemeral.js" type="text/javascript"></script>
         
     </head>
     <body>
+      <div id="editor"></div>
       <div class="splash">
         <p>ephemeral</p>
         <p class="line-2">editor</p>
